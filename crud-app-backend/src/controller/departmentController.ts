@@ -5,7 +5,11 @@ import { Department } from "../entity/Department";
 const departmentRepo = AppDataSource.getRepository(Department);
 
 export const getDepartments = async (req: Request, res: Response) => {
-  const departments = await departmentRepo.find();
+console.log( await departmentRepo.query("Select * from department"));
+
+  const departments = await departmentRepo.find({
+    relations: ["company"]
+  });
   res.json(departments);
 };
 
