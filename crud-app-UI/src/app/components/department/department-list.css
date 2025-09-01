@@ -1,0 +1,13 @@
+/* department-list.component.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+thead {
+  background-color: #f4f4f4;
+}
